@@ -27,9 +27,6 @@ This is not an official API support and etc. This is just a scraper that is usin
 	    - [Manage Download History](https://github.com/drawrowfly/tiktok-scraper/tree/master/examples/CLI/DownloadHistory.md)
 	    - [Scrape and Download in Batch](https://github.com/drawrowfly/tiktok-scraper/tree/master/examples/CLI/BatchDownload.md)
 	    - [Output File Example](#output-file-example)
-	- [Docker](#docker)
-	    - [Build](#build)
-	    - [Run](#run)
 	- [Module](#docker)
 	    - [Methods](#methods)
 	    - [Options](#options)
@@ -191,32 +188,6 @@ Examples:
 ### Output File Example
 
 ![Demo](https://i.imgur.com/6gIbBzo.png)
-
-## Docker
-
-By using docker you won't be able to use --filepath and --historypath , but you can set volume(**host path where all files will be saved**) by using -v
-
-##### Build
-
-```sh
-docker build . -t tiktok-scraper
-```
-
-##### Run
-
-**Example 1:**
-All files including history file will be saved in the directory(\$pwd) where you running the docker from
-
-```sh
-docker run -v $(pwd):/usr/app/files tiktok-scraper user tiktok -d -n 5 -s
-```
-
-**Example 2:**
-All files including history file will be saved in /User/blah/downloads
-
-```sh
-docker run -v /User/blah/downloads:/usr/app/files tiktok-scraper user tiktok -d -n 5 -s
-```
 
 ## Module
 
